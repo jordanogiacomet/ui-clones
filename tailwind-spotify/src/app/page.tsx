@@ -87,7 +87,35 @@ export default function Home() {
             </a>
           </div>
 
-          <h1 className="font-semibold text-3xl mt-10">Made for Jordano</h1>
+          <h2 className="font-semibold text-2xl mt-10">Made for Jordano</h2>
+          <div className="grid grid-cols-5 gap-4 mt-4">
+            <a href='' className="flex flex-col gap-2 bg-white/5 p-4 rounded hover:bg-white/10 transition-colors">
+              <Image className="w-full" width={150} height={150} src="/album.jpeg" alt='Capa do album'/>
+              <strong className="font-semibold">Daily Mix 1</strong>
+              <span className="text-sm text-zinc-500">Avenged Sevenfold</span>
+            </a>
+            <a href='' className="flex flex-col gap-2 bg-white/5 p-4 rounded hover:bg-white/10 transition-colors">
+              <Image className="w-full" width={150} height={150} src="/album.jpeg" alt='Capa do album'/>
+              <strong className="font-semibold">Daily Mix 2</strong>
+              <span className="text-sm text-zinc-500">Avenged Sevenfold</span>
+            </a>
+            <a href='' className="flex flex-col gap-2 bg-white/5 p-4 rounded hover:bg-white/10 transition-colors">
+              <Image className="w-full" width={150} height={150} src="/album.jpeg" alt='Capa do album'/>
+              <strong className="font-semibold">Daily Mix 3</strong>
+              <span className="text-sm text-zinc-500">Avenged Sevenfold</span>
+            </a>
+            <a href='' className="flex flex-col gap-2 bg-white/5 p-4 rounded hover:bg-white/10 transition-colors">
+             <Image className="w-full" width={150} height={150} src="/album.jpeg" alt='Capa do album'/>
+             <strong className="font-semibold">Daily Mix 4</strong>
+             <span className="text-sm text-zinc-500">Avenged Sevenfold</span>
+            </a>
+            <a href='' className="flex flex-col gap-2 bg-white/5 p-4 rounded hover:bg-white/10 transition-colors">
+              <Image className="w-full" width={150} height={150} src="/album.jpeg" alt='Capa do album'/>
+              <strong className="font-semibold">Daily Mix 5</strong>
+              <span className="text-sm text-zinc-500">Avenged Sevenfold</span>
+            </a>
+          </div>
+
         </main>
       </div>
         <footer className="bg-zinc-800 border-t border-zinc-700 p-6">

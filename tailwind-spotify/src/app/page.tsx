@@ -1,37 +1,50 @@
 import { Home as HomeIcon, Search, Library, ChevronLeft, ChevronRight, Play, Shuffle, SkipBack, SkipForward, Repeat, Mic2, LayoutList, Laptop2, Volume2, Maximize2 } from 'lucide-react';
 import Image from 'next/image';
+import { Sidebar } from '@/components/Sidebar';
+
 
 export default function Home() {
   return (
     <div className="h-screen flex flex-col">
       <div className="flex flex-1">
-        <aside className="w-72 bg-zinc-950 p-6">
-          <div className="flex items-center gap-2">
-            <div className="w-3 h-3 bg-red-500 rounded-full"/>
-            <div className="w-3 h-3 bg-yellow-500 rounded-full"/>
-            <div className="w-3 h-3 bg-green-500 rounded-full"/>
-          </div>
-          <nav className="space-y-5  mt-10">
-            <a href="" className="flex items-center gap-3 text-sm font-semibold text-zinc-200">
-             <HomeIcon />
+        <Sidebar.Root>
+          <Sidebar.Header>
+            <Sidebar.Dot className='bg-red-500'/>
+            <Sidebar.Dot className='bg-yellow-500'/>
+            <Sidebar.Dot className='bg-green-500'/>
+          </Sidebar.Header>
+          <Sidebar.Nav className='space-y-5 mt-10'>
+            <Sidebar.Link href="" className="flex items-center gap-3 text-sm font-semibold text-zinc-200">
+              <Sidebar.Icon icon={HomeIcon}/>
               Home
-            </a>
-            <a href="" className="flex items-center gap-3 text-sm font-semibold text-zinc-200">
-              <Search />
+            </Sidebar.Link>
+            <Sidebar.Link href="" className="flex items-center gap-3 text-sm font-semibold text-zinc-200">
+              <Sidebar.Icon icon={Search}/>
               Search
-            </a>
-            <a href="" className="flex items-center gap-3 text-sm font-semibold text-zinc-200">
-              <Library />
+            </Sidebar.Link>
+            <Sidebar.Link href="" className="flex items-center gap-3 text-sm font-semibold text-zinc-200">
+              <Sidebar.Icon icon={Library}/>
               Your Library
-            </a>
-          </nav>
-          <nav className="mt-6 pt-10 border-t border-zinc-800 flex flex-col gap-3">
-            <a className="text-sm text-zinc-400 hover:text-zinc-100" href="">Hot Hits Brasil</a>
-            <a className="text-sm text-zinc-400 hover:text-zinc-100" href="">Aniver Funk</a>
-            <a className="text-sm text-zinc-400 hover:text-zinc-100" href="">My Playlist</a>
-            <a className="text-sm text-zinc-400 hover:text-zinc-100" href="">Top Brasil</a>
-          </nav>
-        </aside>
+            </Sidebar.Link>
+          </Sidebar.Nav>
+          <Sidebar.Nav className='mt-6 pt-10 border-t border-zinc-800 flex flex-col gap-3'>
+            <Sidebar.Link className="text-sm text-zinc-400 hover:text-zinc-100" href="">
+              Hot Hits Brasil
+            </Sidebar.Link>  
+            <Sidebar.Link className="text-sm text-zinc-400 hover:text-zinc-100" href="">
+              Top 100 Brasil
+            </Sidebar.Link>
+            <Sidebar.Link className="text-sm text-zinc-400 hover:text-zinc-100" href="">
+              This is Avenged Sevenfold
+            </Sidebar.Link>
+            <Sidebar.Link className="text-sm text-zinc-400 hover:text-zinc-100" href="">
+              Mix JXDN
+            </Sidebar.Link>
+            <Sidebar.Link className="text-sm text-zinc-400 hover:text-zinc-100" href="">
+              Radiohead Hits
+            </Sidebar.Link>
+          </Sidebar.Nav>
+        </Sidebar.Root>
         <main className="flex-1 p-6">
           <div className="flex items-center gap-4">
             <button className="rounded-full bg-black/40 p-1">
